@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Expense Tracker</title>
+
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-p5E1lUjQd+Y4w9K6f+3OfV6xH45+zZzYxBZ0r+qO5C6V2L4+Jr5V1X2zC0rD5yHf" crossorigin="anonymous">
+  
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <div class="container my-5">
+    <h2 class="text-center mb-4 display-4 fw-bold">
+      <i class="fas fa-wallet icon-large"></i> Smart Personal Expense Tracker
+    </h2>
+
+    <!-- Add Expense Form -->
+    <div class="card shadow-sm mb-4">
+      <div class="card-header bg-primary text-white">
+        <i class="fas fa-plus-circle me-2"></i>Add New Expense
+      </div>
+      <div class="card-body">
+        <form id="expense-form" class="row g-3">
+          <div class="col-md-4">
+            <input type="text" class="form-control" id="title" placeholder="Expense Title" required />
+          </div>
+          <div class="col-md-2">
+            <input type="number" class="form-control" id="amount" placeholder="Amount ₹" required />
+          </div>
+          <div class="col-md-3">
+            <select class="form-select" id="category" required>
+              <option value="">Select Category</option>
+              <option value="Food">Food</option>
+              <option value="Transport">Transport</option>
+              <option value="Entertainment">Entertainment</option>
+              <option value="Utilities">Utilities</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <input type="date" class="form-control" id="date" required />
+          </div>
+          <div class="col-md-1 d-grid">
+            <button type="submit" class="btn btn-success">
+              <i class="fas fa-plus"></i> Add
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="row mb-4">
+      <div class="col-md-6 d-grid mb-2">
+        <a href="expenses.html" class="btn btn-info btn-lg">
+          <i class="fas fa-chart-bar icon-large"></i> Check Current Expenses
+        </a>
+      </div>
+      <div class="col-md-6 d-grid mb-2">
+        <button id="clear-expenses" class="btn btn-danger btn-lg">
+          <i class="fas fa-trash-alt icon-large"></i> Clear All Expenses
+        </button>
+      </div>
+    </div>
+
+    <!-- Summary Section -->
+    <div class="card shadow-sm">
+      <div class="card-header bg-info text-white">
+        <i class="fas fa-chart-pie me-2"></i>Financial Summary
+      </div>
+      <div class="card-body" id="summary">
+        <!-- Summary content will be dynamically inserted here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha384-XmNLzXBlpoeDhy9UnD+XxL1k3ySvdO2sow3zK6xjzXObzC0l3Vq2T0H4QjSL2PYK" crossorigin="anonymous"></script>
+  
+  <!-- Bootstrap JS Bundle CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Zk0+oJgO8+X1g4+7eV1jHh4+yT7O6xGzT5f5ZxB1xY8+2QkB3X5C4vH5wR6J7L0r" crossorigin="anonymous"></script>
+  
+  <!-- Custom JS -->
+  <script src="js/app.js"></script>
+</body>
+</html>
